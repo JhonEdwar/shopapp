@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from "expo-font";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import AppNavigator from "./navigation";
+import { Categories } from "./screens";
+import { styles } from "./styles";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () => {
+  const [loaded] = useFonts({
+    "SignikaNegative-Regular": require("../assets/fonts/SignikaNegative-Regular.ttf"),
+    "SignikaNegative-Medium": require("../assets/fonts/SignikaNegative-Medium.ttf"),
+    "SignikaNegative-Bold": require("../assets/fonts/SignikaNegative-Bold.ttf"),
+    "SignikaNegative-Light": require("../assets/fonts/SignikaNegative-Light.ttf"),
+  });
+  if (!loaded) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
+
+  return <AppNavigator />;
+};
+
+export default App;
