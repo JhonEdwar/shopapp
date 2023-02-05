@@ -1,0 +1,15 @@
+export const theme={
+    colors:{
+        primary:'#EB455F',
+        secundary:'#2B3467',
+        comp:'#BAD7E9',
+        background:'#FCFFE7',
+        text:'#2B3467',
+        title:'#2B3467',
+        subtitle:'#BAD7E9',
+        black:'#000',
+        white:'#fff',
+        gray:'#979b9b',
+    },
+
+};

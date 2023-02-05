@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
+import { Text, View } from "react-native";
+import { theme } from "../constants/theme";
 import { Categories, Products, ProductDetail } from "../screens/index";
 
 const Stack = createNativeStackNavigator();
@@ -7,7 +8,17 @@ const Stack = createNativeStackNavigator();
 // arbol de navegacion
 const ShopNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Categories">
+    <Stack.Navigator
+      initialRouteName="Categories"
+      screenOptions={{
+        headerTintColor: theme.colors.primary,
+        headerTitleStyle: { fontFamily: "SignikaNegative-Light", fontSize: 18 },
+        headerShadowVisible: {
+          borderBottonWidth: 1,
+          elevation: 4,
+          shadowOpacity: 0.2,
+        },
+      }}>
       <Stack.Screen
         name="Categories"
         component={Categories}
@@ -20,6 +31,13 @@ const ShopNavigator = () => {
         component={Products}
         options={{
           title: "Products",
+          headerRight:()=>{
+            return(
+                <View>
+                    <Text>click here</Text>
+                </View>
+            )
+          }
         }}
       />
       <Stack.Screen
