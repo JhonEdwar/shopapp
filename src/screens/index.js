@@ -1,3 +1,5 @@
-export { default as Categories } from "./categories";
-export { default as Products } from "./products";
-export { default as ProductDetail } from "./products-detail";
+export { default as Categories } from "./categories/index";
+export { default as Products } from "./products/index";
+export { default as ProductDetail } from "./products-detail/index";
+export { default as Cart} from "./cart/index"
+export { default as Orders } from "./orders/index";

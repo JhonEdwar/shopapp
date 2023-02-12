@@ -12,8 +12,12 @@ const ShopNavigator = () => {
     <Stack.Navigator
       initialRouteName="Categories"
       screenOptions={{
+        headerStyle: {
+          backgroundColor: THEME.colors.white,
+        },
         headerTintColor: THEME.colors.primary,
-        headerTitleStyle: { fontFamily: "SignikaNegative-Light", fontSize: 18 },
+        navigationBarColor: THEME.colors.secondary,
+        headerTitleStyle: { fontFamily: "SignikaNegative-Light", fontSize: 18, color: THEME.colors.title, },
         headerShadowVisible: {
           borderBottonWidth: 1,
           elevation: 4,
