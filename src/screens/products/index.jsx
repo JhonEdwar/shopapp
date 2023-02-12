@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
-import { THEME } from "../../constants/theme";
 
 import { styles } from "./styles";
+import { THEME } from "../../constants/theme";
 
-const Products = ({ navigation }) => {
+const Products = ({ navigation, route }) => {
+  const { categoryId, title } = route.params;
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Products</Text>

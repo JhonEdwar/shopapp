@@ -8,7 +8,9 @@ import { CATEGORIES } from "../../constants/data/index";
 import { THEME } from "../../constants/theme";
 
 const Categories = ({ navigation }) => {
-  const onSelected = (item) => {};
+  const onSelected = (item) => {
+    navigation.navigate("Products", { categoryId: item.id, title: item.title });
+  };
   const renderItem = ({ item }) => <CategoryItem item={item} onSelected={onSelected} />;
   const keyExtractor = (item) => item.id.toString();
   return (
@@ -18,6 +20,7 @@ const Categories = ({ navigation }) => {
         data={CATEGORIES}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
+        contentContainerStyle={styles.contentContainerList}
       />
       <Text style={styles.title}>Categories</Text>
     </View>

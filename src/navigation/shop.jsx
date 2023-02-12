@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Text, View } from "react-native";
+
 import { THEME } from "../constants/theme";
 import { Categories, Products, ProductDetail } from "../screens/index";
 
@@ -29,16 +30,18 @@ const ShopNavigator = () => {
       <Stack.Screen
         name="Products"
         component={Products}
-        options={{
-          title: "Products",
-          headerRight:()=>{
-            return(
-                <View>
-                    <Text>click here</Text>
-                </View>
-            )
-          }
-        }}
+        options={
+          ({ route }) => ({ title: route.params.title })
+
+          // title: "Products",
+          // headerRight: () => {
+          //   return (
+          //     <View>
+          //       <Text>click here</Text>
+          //     </View>
+          //   );
+          // },
+        }
       />
       <Stack.Screen
         name="ProductDetail"
