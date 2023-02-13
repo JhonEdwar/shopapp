@@ -5,13 +5,9 @@ import { THEME } from "../../constants/theme";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    borderRadius:10,
-    marginHorizontal:20,
-    marginVertical:10,
-    height:160,
-    backgroundColor: THEME.colors.background,
-    alignItems: "center",
-    justifyContent: "center",
+    marginHorizontal: 20,
+    marginVertical: 10,
+    height: 160,
   },
   contentContainer: {
     flex: 1,

@@ -6,10 +6,10 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: 90,
-    backgroundColor: THEME.colors.secondary,
+    backgroundColor: THEME.colors.comp,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: THEME.colors.primary,
+    borderColor: THEME.colors.secondary,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
   },
   content: {},
   total: {
-    fontSize: 16,
-    fontFamily: 'SignikaNegative-Medium',
+    fontSize: 18,
+    fontFamily: 'SignikaNegative-Bold',
   },
 });

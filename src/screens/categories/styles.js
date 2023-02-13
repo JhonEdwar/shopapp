@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: "SignikaNegative-Bold",
     padding: 10,
-    color: THEME.colors.secundary,
+    color: THEME.colors.secondary,
   },
   containerList:{
     flex: 1,

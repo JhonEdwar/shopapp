@@ -17,7 +17,7 @@ const ShopNavigator = () => {
         },
         headerTintColor: THEME.colors.primary,
         navigationBarColor: THEME.colors.secondary,
-        headerTitleStyle: { fontFamily: "SignikaNegative-Light", fontSize: 18, color: THEME.colors.title, },
+        headerTitleStyle: { fontFamily: "SignikaNegative-Bold", fontSize: 18, color: THEME.colors.title, },
         headerShadowVisible: {
           borderBottonWidth: 1,
           elevation: 4,

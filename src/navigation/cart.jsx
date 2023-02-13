@@ -16,7 +16,7 @@ const CartNavigator = () => {
         headerTintColor: THEME.colors.primary,
         navigationBarColor: THEME.colors.secundary,
         headerTitleStyle: {
-          fontFamily: "SignikaNegative-Light",
+          fontFamily: "SignikaNegative-Bold",
           fontSize: 18,
           color: THEME.colors.title,
         },

@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
   },
   totalPrice: {
     color: THEME.colors.white,
-    fontSize: 16,
-    fontFamily: "SignikaNegative-Medium",
+    fontSize: 18,
+    fontFamily: "SignikaNegative-Bold",
   },
 });

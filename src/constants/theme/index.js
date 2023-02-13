@@ -1,7 +1,7 @@
 export const THEME = {
   colors: {
     primary: "#EB455F",
-    secundary: "#2B3467",
+    secondary: "#2B3467",
     comp: "#BAD7E9",
     background: "#FCFFE7",
     text: "#2B3467",
@@ -10,5 +10,6 @@ export const THEME = {
     black: "#000",
     white: "#fff",
     gray: "#979b9b",
+    alert: "#F94A29",
   },
 };

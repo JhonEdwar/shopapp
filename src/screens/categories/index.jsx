@@ -22,7 +22,6 @@ const Categories = ({ navigation }) => {
         keyExtractor={keyExtractor}
         contentContainerStyle={styles.contentContainerList}
       />
-      <Text style={styles.title}>Categories</Text>
     </View>
   );
 };
