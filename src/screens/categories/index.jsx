@@ -4,10 +4,13 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 
 import { styles } from "./styles";
 import { CategoryItem } from "../../components";
-import { CATEGORIES } from "../../constants/data/index";
+// import { CATEGORIES } from "../../constants/data/index";
+import { useSelector } from "react-redux";
+
 import { THEME } from "../../constants/theme";
 
 const Categories = ({ navigation }) => {
+  const categories = useSelector((state)=>state.category.categories)
   const onSelected = (item) => {
     navigation.navigate("Products", { categoryId: item.id, title: item.title });
   };
@@ -17,7 +20,7 @@ const Categories = ({ navigation }) => {
     <View style={styles.container}>
       <FlatList
         style={styles.containerList}
-        data={CATEGORIES}
+        data={categories}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         contentContainerStyle={styles.contentContainerList}
@@ -27,9 +30,3 @@ const Categories = ({ navigation }) => {
 };
 
 export default Categories;
-
-/* <Button
-title="Go to products"
-onPress={() => navigation.navigate("Products")}
-color={THEME.colors.primary}
-/> */
